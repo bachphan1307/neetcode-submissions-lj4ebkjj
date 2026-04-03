@@ -3,9 +3,8 @@ public:
     int lengthOfLongestSubstring(string s) {
         int n = s.size();
         if(n==0) return 0;
-        if(n==1) return 1;
         int max = 1;
-        unordered_map<char, int> hmap;
+        int hmap[256];
         for(int i=0; i<n; i++){
             hmap[s[i]] = 0;
         }
